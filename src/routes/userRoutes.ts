@@ -1,46 +1,15 @@
 import express from 'express';
 import passport from '../config/passport.js';
-import User, { IUser } from '../models/User.js';
 import { signToken } from '../utils/auth.js';
+import { loginUser, registerUser } from '../controllers/userController.js';
 
 const router = express.Router();
 
 // POST /api/users/register - Create a new user
-router.post(
-  '/register',
-  async (req: express.Request, res: express.Response) => {
-    try {
-      const user = await User.create(req.body);
-      const token = signToken(user);
-      res.status(201).json({ token, user });
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  }
-);
+router.post('/register', registerUser);
 
 // POST /api/users/login - Authenticate a user and return a token
-router.post('/login', async (req: express.Request, res: express.Response) => {
-  console.log('Login: ', req.body);
-  const user: IUser = await User.findOne({
-    email: req.body.email
-  });
-
-  if (!user) {
-    console.log("Can't find this user");
-    return res.status(400).json({ message: "Can't find this user" });
-  }
-
-  const correctPw = await user.isCorrectPassword(req.body.password);
-
-  if (!correctPw) {
-    console.log('Wrong password!');
-    return res.status(400).json({ message: 'Wrong password!' });
-  }
-
-  const token = signToken(user);
-  res.json({ token, user });
-});
+router.post('/login', loginUser);
 
 // Route to start the OAuth flow
 // When a user visits this URL, they will be redirected to GitHub to log in.
