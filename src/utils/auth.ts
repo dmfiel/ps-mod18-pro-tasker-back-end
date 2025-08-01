@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import express from 'express';
 
 const secret = process.env.JWT_SECRET;
-const expiration = '2h';
+const expiration = '24h';
 
 export function authMiddleware(
   req: express.Request,

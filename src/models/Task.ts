@@ -10,8 +10,7 @@ const taskSchema = new Schema(
       trim: true
     },
     description: {
-      type: String,
-      required: true
+      type: String
     },
     status: {
       type: String,
@@ -22,7 +21,12 @@ const taskSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'Project',
       required: true
-    }
+    },
+    priority: {
+      type: String,
+      enum: ['3-low', '2-medium', '1-high']
+    },
+    dueDate: { type: Date }
   },
   { timestamps: true }
 );
