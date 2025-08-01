@@ -1,11 +1,12 @@
-# Task Master
+# Pro Tasker - Project Management
 
-This project provides the backend for a project and task management product, TaskMaster. This API is the engine that powers the entire application, handling user accounts, project management, and individual tasks. It provides a real-world, secure, and functional RESTful API with user-level authentication and authorization to keep information private.
+This project provides a full-stack application for project and task management, Pro Tasker. This API is the engine that powers the entire application, handling user accounts, project management, and individual tasks. It provides a real-world, secure, and functional RESTful API with user-level authentication and authorization to keep information private.
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
@@ -21,37 +22,37 @@ The API provides secure row-level authenticated endpoints to allow clients to:
 Manage Users:
 
 - POST /api/users/register
-  - Register to create a new user, ensuring the password gets hashed securely
+  - Register to create a new user, ensuring the password gets hashed securely.
 - POST /api/users/login
-  - Login to find a user by their email, compare the provided password with the stored hash, and, if successful, generate and return a signed JSON Web Token (JWT)
+  - Login to find a user by their email, compare the provided password with the stored hash, and, if successful, generate and return a signed JSON Web Token (JWT).
 
 Manage Projects:
 
 - POST /api/projects
-  - Create a new project assigned as owned by the current user
+  - Create a new project assigned as owned by the current user.
 - GET /api/projects
-  - Get all projects owned by the currently logged-in user
+  - Get all projects owned by the currently logged-in user.
 - GET /api/projects/:id
-  - Get a single project by its ID
+  - Get a single project by its ID.
 - PUT /api/projects/:id
-  - Update a project
+  - Update a project.
 - DELETE /api/projects/:id
-  - Delete a project
-- GET /api/project/:projectId/tasks
-  - Get all tasks for a given project
-- POST /api/project/:projectId/tasks
-  - Create a task for a given project
+  - Delete a project.
 
 Manage Tasks:
 
 - POST /api/projects/:projectId/tasks
-  - Create a new task for a specific project
+  - Create a new task for a specific project.
 - GET /api/projects/:projectId/tasks
-  - Get all tasks for a specific project
+  - Get all tasks for a specific project.
 - PUT /api/tasks/:taskId
-  - Update a single task
+  - Update a single task.
 - DELETE /api/tasks/:taskId
-  - Delete a single task
+  - Delete a single task.
+
+### Links
+
+- Live Site URL: (https://fiel.us/pro-tasker/)
 
 ## My process
 
