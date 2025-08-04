@@ -30,10 +30,14 @@ Manage Projects:
 
 - POST /api/projects
   - Create a new project assigned as owned by the current user.
+- POST /api/projects/:id/tasks
+  - Create a new task for a project.
 - GET /api/projects
   - Get all projects owned by the currently logged-in user.
 - GET /api/projects/:id
   - Get a single project by its ID.
+- GET /api/projects/:id/tasks
+  - Get all tasks for a project.
 - PUT /api/projects/:id
   - Update a project.
 - DELETE /api/projects/:id
@@ -41,10 +45,12 @@ Manage Projects:
 
 Manage Tasks:
 
-- POST /api/projects/:projectId/tasks
+- POST /api/tasks
   - Create a new task for a specific project.
-- GET /api/projects/:projectId/tasks
-  - Get all tasks for a specific project.
+- GET /api/tasks
+  - Get all tasks for the user.
+- GET /api/tasks/:id
+  - Get a single task.
 - PUT /api/tasks/:taskId
   - Update a single task.
 - DELETE /api/tasks/:taskId
