@@ -4,14 +4,14 @@ This project provides a full-stack application for project and task management, 
 
 ## Table of contents
 
-- [🛠️ Tech Stack](#tech-stack)
-  - [🚀 Core Stack](#core-stack)
-  - [🎨 UI & Stylin](#ui-&-styling)
-  - [🔐 Authentication & Security](#authentication-&-security)
-  - [🧰 Dev Tools & Utilities](#dev-tools-&-utilities)
-  - [🧪 Testing & Debugging](#testing-&-debugging)
-  - [📦 Deployment](#deployment)
-  - [⏱️ Scheduling / Automation](#scheduling-/-automation)
+- [🛠️ Tech Stack](#%EF%B8%8F-tech-stack)
+  - [🚀 Core Stack](#-core-stack)
+  - [🎨 UI & Stylin](#-ui--styling)
+  - [🔐 Authentication & Security](#-authentication--security)
+  - [🧰 Dev Tools & Utilities](#-dev-tools--utilities)
+  - [🧪 Testing & Debugging](#-testing--debugging)
+  - [📦 Deployment](#-deployment)
+  - [⏱️ Scheduling / Automation](#%EF%B8%8F-scheduling--automation)
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Links](#links)
