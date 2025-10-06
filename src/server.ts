@@ -20,8 +20,7 @@ app.use(morgan('dev'));
 const allowedOrigins = [
   'https://fiel.us',
   'http://fiel.us',
-  'http://localhost:5173',
-  'http://localhost:5174'
+  'https://github.com'
 ];
 
 // allowed !orgin (undefined) to accept Postman transactions
