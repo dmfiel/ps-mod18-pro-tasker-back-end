@@ -1,6 +1,6 @@
 import express from 'express';
-import User, { IUser } from '../models/User.js';
-import { signToken } from '../utils/auth.js';
+import User, { IUser } from '../models/User';
+import { signToken } from '../utils/auth';
 
 // POST /api/users/register - Create a new user
 export async function registerUser(

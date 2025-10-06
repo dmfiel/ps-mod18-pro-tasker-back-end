@@ -1,6 +1,6 @@
 import express from 'express';
-import passport from '../config/passport.js';
-import { signToken } from '../utils/auth.js';
+import passport from '../config/passport';
+import { signToken } from '../utils/auth';
 import { loginUser, registerUser } from '../controllers/userController.js';
 
 const FRONTEND_URL = process.env.FRONTEND_URL || 'https://fiel.us/pro-tasker';

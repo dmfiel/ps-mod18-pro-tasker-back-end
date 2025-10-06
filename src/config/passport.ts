@@ -1,7 +1,7 @@
 import passport from 'passport';
 import GitHubStrategy from 'passport-github2';
 import dotenv from 'dotenv';
-import User from '../models/User.js';
+import User from '../models/User';
 
 passport.use(
   new GitHubStrategy(
